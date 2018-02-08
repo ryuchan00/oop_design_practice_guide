@@ -1,0 +1,2 @@
+# oop_design_practice_guide
+オブジェクト指向設計実践ガイドのソースコード
