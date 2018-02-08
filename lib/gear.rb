@@ -9,4 +9,12 @@ class Gear
   def ratio
     chainring / cog.to_f
   end
+
+  def gear_inches
+    ratio * diameter
+  end
+
+  def diameter
+    rim + (tire * 2)
+  end
 end
