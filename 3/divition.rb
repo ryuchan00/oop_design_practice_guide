@@ -86,9 +86,10 @@ class Gear3
   attr_reader :chainring, :cog, :wheel
 
   # 引数をただ一つ、argsのみを取るようにする。これなら引数の順番に依存しない設計となる。
+  # 明示的にデフォルト値を設定する
   def initialize(args)
-    @chainring = args[:chainring]
-    @cog = args[:cog]
+    @chainring = args[:chainring] || 40
+    @cog = args[:cog] || 18
     @wheel = args[:wheel]
   end
 
