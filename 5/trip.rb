@@ -18,6 +18,16 @@ class Trip
   end
 end
 
+class Mechanic
+  def prepare_bicycles(bicycles)
+    bicycles.each { |bicycle| prepare_bicycle(bicycle) }
+  end
+
+  def prepare_bicycle(bicycle)
+    # ...
+  end
+end
+
 # TripCoordinator と Driver を追加した
 class TripCoordinator
   def buy_food(customers)
