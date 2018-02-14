@@ -76,8 +76,16 @@ end
 
 road_bike =
   Bicycle.new(
-           size: 'L',
-           parts: RoadBikeParts.new(tape_color: 'red'))
+    size: 'L',
+    parts: RoadBikeParts.new(tape_color: 'red'))
 
 p road_bike.size # => L
 p road_bike.spears
+
+mountain_bike =
+  Bicycle.new(
+    size: 'L',
+    parts: MountainBikeParts.new(rear_shock: 'Fox'))
+
+p mountain_bike.size
+p mountain_bike.spears
