@@ -1,0 +1,39 @@
+# 9.2 受信メッセージをテストする
+class Wheel
+  attr_reader :rim, :tire
+
+  def initialize(rim, tire)
+    @rim = rim
+    @tire = tire
+  end
+
+  def diameter
+    rim + (tire * 2)
+  end
+
+  def circumference
+    diameter * Math::PI
+  end
+end
+
+class Gear
+  attr_reader :chainring, :cog, :rim, :tire
+
+  def initialize(args)
+    @chainring = args[:chainring]
+    @cog = args[:cog]
+    @rim = args[:rim]
+    @tire = args[:tire]
+  end
+
+  def gear_inches
+    ratio * Wheel.new(rim, tire).diameter
+  end
+
+  # ギア比率
+  def ratio
+    chainring / cog.to_f
+  end
+
+  # and more ...
+end
